@@ -173,15 +173,13 @@ class LinkedList(object):
             return self.head
 
             # swap next and prev pointers for the current node
-        prev = curr.prev
-        curr.prev = curr.next
-        curr.next = prev
+            prev = curr.prev
+            curr.prev = curr.next
+            curr.next = prev
 
-        # recur with the next node
-        self.head = _reverse_recurrsive(self.head, curr.prev)
-        return self.head
-
-        #print("Complete the implementation")
+            # recur with the next node
+            self.head = _reverse_recurrsive(self.head, curr.prev)
+            return self.head
 
     def __str__(self):
         result = "\n*** LinkedList ***\n"
